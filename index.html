@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="icon.ico">
+	<title>RegExpPattern</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: rgba(205, 205, 205, .2);
+		}
+		h1, p {
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			margin-top: 100px;
+			font-size: 48px;
+			font-weight: 100;
+			text-align: center;
+			letter-spacing: 1px;
+			color: rgba(51, 153, 255, 0.8);
+		}
+		.tip {
+			text-align: center;
+			font-size: 14px;
+			color: rgba(0, 0, 0, .65);
+		}
+		#main {
+			width: 100%;
+			margin-top: 120px;
+		}
+		select {
+			display: block;
+			height: 34px;
+			margin: 0 auto 4px auto;
+			background-color: transparent;
+			outline: none;
+			font-size: 16px;
+			color: rgba(0, 0, 0, .65);
+		}
+		.text {
+			width: 1000px;
+			height: 80px;
+			margin: 30px auto 0 auto;
+			text-align: center;
+			border-radius: 6px;
+			background-color: rgba(51, 153, 255, 0.1);
+		}
+		.title, .content {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			line-height: 80px;
+		}
+		.title {
+			font-size: 22px;
+			font-weight: bold;
+			color: #999999;
+		}
+		.content {
+			margin-left: 40px;
+			padding: 0 20px;
+			font-size: 20px;
+			font-style: italic;
+			text-decoration: underline;
+			color: rgba(0, 0, 0, .65);
+		}
+	</style>
+</head>
+<body>
+	<h1>RegularExpressionPattern</h1>
+	<div id="main">
+		<select v-model="select">
+			<option v-for="reg in regs" v-bind:value="reg.value">{{reg.option}}</option>
+		</select>
+			<p class="tip">click to choose a pattern</p>
+
+		<div class="text">
+			<p class="title">RegExp: </p>
+			<p class="content">{{select}}</p>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
