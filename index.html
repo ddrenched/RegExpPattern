@@ -75,8 +75,7 @@
 		<select v-model="select">
 			<option v-for="reg in regs" v-bind:value="reg.value">{{reg.option}}</option>
 		</select>
-			<p class="tip">click to choose a pattern</p>
-
+		<p class="tip">click to choose a pattern</p>
 		<div class="text">
 			<p class="title">RegExp: </p>
 			<p class="content">{{select}}</p>
