@@ -22,14 +22,13 @@ const regArr = [
 			{ option: '26个英文字母', value: '/^[a-zA-Z]*$/'},
 			{ option: '26个小写英文字母', value: '/^[a-z]*$/'},
 			{ option: '26个大写英文字母', value: '/^[A-Z]*$/'},
-			{ option: '6-20位所有字符', value: '/^.{6,20}$/'},
 			{ option: '6-20位所有字符', value: '/^.{6,20}$/'}
 ]
 
 var main = new Vue({
 	el: '#main',
 	data: {
-		select: 'waiting input...',
+		select: 'waiting for input...',
 		regs: regArr
 	}
 })
